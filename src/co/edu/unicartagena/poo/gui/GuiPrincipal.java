@@ -26,29 +26,33 @@ public class GuiPrincipal extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jPanel1 = new javax.swing.JPanel();
         BarraMenu = new javax.swing.JMenuBar();
         MenuCiclistas = new javax.swing.JMenu();
         itemAgregarCiclistaUsuario = new javax.swing.JMenuItem();
-        itemConsultaDatosUsuario = new javax.swing.JMenuItem();
-        itemEditarDatosUsuario = new javax.swing.JMenuItem();
-        itemEliminarDatosUsuario = new javax.swing.JMenuItem();
         jSeparator1 = new javax.swing.JPopupMenu.Separator();
-        SubmenuReporteUsuario = new javax.swing.JMenu();
-        itemBuscarUsuarioxnombre = new javax.swing.JMenuItem();
-        BuscarUsuarioxcorreo = new javax.swing.JMenuItem();
         MenuBicicleta = new javax.swing.JMenu();
         itemAgregarInformacionBicicleta = new javax.swing.JMenuItem();
-        itemConsultarINFObicicleta = new javax.swing.JMenuItem();
-        itemEditarInfoBicicleta = new javax.swing.JMenuItem();
-        itemEliminarBicicleta = new javax.swing.JMenuItem();
         jSeparator2 = new javax.swing.JPopupMenu.Separator();
-        itemReporteBicicleta = new javax.swing.JMenu();
-        itemBuscarBicicleta = new javax.swing.JMenuItem();
         MenuCompetencia = new javax.swing.JMenu();
         itemInformacionCompetencia = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle(".::: GESTION DE BICICLETAS:::.");
+
+        jPanel1.setBackground(javax.swing.UIManager.getDefaults().getColor("Button.default.focusColor"));
+        jPanel1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 836, Short.MAX_VALUE)
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 488, Short.MAX_VALUE)
+        );
 
         MenuCiclistas.setText("Ciclistas");
         MenuCiclistas.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
@@ -61,34 +65,7 @@ public class GuiPrincipal extends javax.swing.JFrame {
             }
         });
         MenuCiclistas.add(itemAgregarCiclistaUsuario);
-
-        itemConsultaDatosUsuario.setFont(new java.awt.Font("Arial", 3, 16)); // NOI18N
-        itemConsultaDatosUsuario.setText("Consultar Mis Datos ..");
-        MenuCiclistas.add(itemConsultaDatosUsuario);
-
-        itemEditarDatosUsuario.setFont(new java.awt.Font("Arial", 3, 16)); // NOI18N
-        itemEditarDatosUsuario.setText("Editar Mis Datos..");
-        MenuCiclistas.add(itemEditarDatosUsuario);
-
-        itemEliminarDatosUsuario.setFont(new java.awt.Font("Arial", 3, 16)); // NOI18N
-        itemEliminarDatosUsuario.setText("Eliminarme...");
-        MenuCiclistas.add(itemEliminarDatosUsuario);
         MenuCiclistas.add(jSeparator1);
-
-        SubmenuReporteUsuario.setText("Reportes");
-
-        itemBuscarUsuarioxnombre.setText("Por Nombre");
-        SubmenuReporteUsuario.add(itemBuscarUsuarioxnombre);
-
-        BuscarUsuarioxcorreo.setText("Por Correo");
-        BuscarUsuarioxcorreo.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                BuscarUsuarioxcorreoActionPerformed(evt);
-            }
-        });
-        SubmenuReporteUsuario.add(BuscarUsuarioxcorreo);
-
-        MenuCiclistas.add(SubmenuReporteUsuario);
 
         BarraMenu.add(MenuCiclistas);
 
@@ -103,32 +80,7 @@ public class GuiPrincipal extends javax.swing.JFrame {
             }
         });
         MenuBicicleta.add(itemAgregarInformacionBicicleta);
-
-        itemConsultarINFObicicleta.setFont(new java.awt.Font("Arial", 3, 16)); // NOI18N
-        itemConsultarINFObicicleta.setText("Consultar Mis Datos ..");
-        itemConsultarINFObicicleta.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                itemConsultarINFObicicletaActionPerformed(evt);
-            }
-        });
-        MenuBicicleta.add(itemConsultarINFObicicleta);
-
-        itemEditarInfoBicicleta.setFont(new java.awt.Font("Arial", 3, 16)); // NOI18N
-        itemEditarInfoBicicleta.setText("Editar Informacion..");
-        MenuBicicleta.add(itemEditarInfoBicicleta);
-
-        itemEliminarBicicleta.setFont(new java.awt.Font("Arial", 3, 16)); // NOI18N
-        itemEliminarBicicleta.setText("Eliminar Bicicleta...");
-        MenuBicicleta.add(itemEliminarBicicleta);
         MenuBicicleta.add(jSeparator2);
-
-        itemReporteBicicleta.setText("Reportes..");
-
-        itemBuscarBicicleta.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        itemBuscarBicicleta.setText("Por Modelo");
-        itemReporteBicicleta.add(itemBuscarBicicleta);
-
-        MenuBicicleta.add(itemReporteBicicleta);
 
         BarraMenu.add(MenuBicicleta);
 
@@ -152,30 +104,26 @@ public class GuiPrincipal extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 840, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 492, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void BuscarUsuarioxcorreoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BuscarUsuarioxcorreoActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_BuscarUsuarioxcorreoActionPerformed
-
-    private void itemConsultarINFObicicletaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itemConsultarINFObicicletaActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_itemConsultarINFObicicletaActionPerformed
-
     private void itemInformacionCompetenciaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itemInformacionCompetenciaActionPerformed
-        // TODO add your handling code here:
+        GuiCompetencia gui = new GuiCompetencia(this,true);
+       gui.setLocationRelativeTo(this);
+       gui.setVisible(true);
     }//GEN-LAST:event_itemInformacionCompetenciaActionPerformed
 
     private void itemAgregarInformacionBicicletaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itemAgregarInformacionBicicletaActionPerformed
-        // TODO add your handling code here:
+      GuiBicicleta gui = new GuiBicicleta(this,true);
+       gui.setLocationRelativeTo(this);
+       gui.setVisible(true);
     }//GEN-LAST:event_itemAgregarInformacionBicicletaActionPerformed
 
     private void itemAgregarCiclistaUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itemAgregarCiclistaUsuarioActionPerformed
@@ -222,23 +170,13 @@ public class GuiPrincipal extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JMenuBar BarraMenu;
-    private javax.swing.JMenuItem BuscarUsuarioxcorreo;
     private javax.swing.JMenu MenuBicicleta;
     private javax.swing.JMenu MenuCiclistas;
     private javax.swing.JMenu MenuCompetencia;
-    private javax.swing.JMenu SubmenuReporteUsuario;
     private javax.swing.JMenuItem itemAgregarCiclistaUsuario;
     private javax.swing.JMenuItem itemAgregarInformacionBicicleta;
-    private javax.swing.JMenuItem itemBuscarBicicleta;
-    private javax.swing.JMenuItem itemBuscarUsuarioxnombre;
-    private javax.swing.JMenuItem itemConsultaDatosUsuario;
-    private javax.swing.JMenuItem itemConsultarINFObicicleta;
-    private javax.swing.JMenuItem itemEditarDatosUsuario;
-    private javax.swing.JMenuItem itemEditarInfoBicicleta;
-    private javax.swing.JMenuItem itemEliminarBicicleta;
-    private javax.swing.JMenuItem itemEliminarDatosUsuario;
     private javax.swing.JMenuItem itemInformacionCompetencia;
-    private javax.swing.JMenu itemReporteBicicleta;
+    private javax.swing.JPanel jPanel1;
     private javax.swing.JPopupMenu.Separator jSeparator1;
     private javax.swing.JPopupMenu.Separator jSeparator2;
     // End of variables declaration//GEN-END:variables

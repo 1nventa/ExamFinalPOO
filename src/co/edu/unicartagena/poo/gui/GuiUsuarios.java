@@ -20,9 +20,7 @@ import javax.swing.JOptionPane;
 public class GuiUsuarios extends javax.swing.JDialog {
 
     /**
-     * Creates new form GuiUsuarios
-     * @param parent
-     * @param modal
+     *
      */
     public GuiUsuarios(java.awt.Frame parent, boolean modal) {
         super(parent, modal);
