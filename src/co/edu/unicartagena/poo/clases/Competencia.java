@@ -6,7 +6,7 @@ package co.edu.unicartagena.poo.clases;
  * @author Carlos
  */
 public class Competencia {
-    private String nombre;
+   private String nombre;
     private String fecha;
     private String lugar;
 
@@ -38,5 +38,18 @@ public class Competencia {
 
     public void setLugar(String lugar) {
         this.lugar = lugar;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) return true;
+        if (obj == null || getClass() != obj.getClass()) return false;
+        Competencia that = (Competencia) obj;
+        return nombre.equalsIgnoreCase(that.nombre);
+    }
+
+    @Override
+    public int hashCode() {
+        return nombre.toLowerCase().hashCode();
     }
 }
