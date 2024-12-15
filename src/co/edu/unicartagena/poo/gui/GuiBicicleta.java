@@ -6,8 +6,12 @@ package co.edu.unicartagena.poo.gui;
 
 import co.edu.unicartagena.poo.clases.Bicicleta;
 import co.edu.unicartagena.poo.clases.GestorBicicleta;
+import java.awt.GridLayout;
 import javax.swing.JFrame;
+import javax.swing.JLabel;
 import javax.swing.JOptionPane;
+import javax.swing.JPanel;
+import javax.swing.JTextField;
 
 /**
  *
@@ -257,7 +261,49 @@ public GuiBicicleta() {
     }//GEN-LAST:event_BotonEliminarActionPerformed
 
     private void BotonEditarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonEditarActionPerformed
-        // TODO add your handling code here:
+        String marca = JOptionPane.showInputDialog(this, "Ingrese la marca de la bicicleta a editar:", "Editar Bicicleta", JOptionPane.QUESTION_MESSAGE);
+
+    if (marca == null || marca.trim().isEmpty()) {
+        JOptionPane.showMessageDialog(this, "Debe ingresar la marca de una bicicleta.", "Error", JOptionPane.ERROR_MESSAGE);
+        return;
+    }
+
+    Bicicleta bicicleta = gestorBicicletas.buscarBicicletaPorMarca(marca.trim());
+
+    if (bicicleta == null) {
+        JOptionPane.showMessageDialog(this, "No se encontró ninguna bicicleta con esa marca.", "Error", JOptionPane.ERROR_MESSAGE);
+        return;
+    }
+
+    JPanel panelEdicion = new JPanel(new GridLayout(3, 2, 5, 5));
+    JTextField campoMarca = new JTextField(bicicleta.getMarca());
+    JTextField campoTipo = new JTextField(bicicleta.getTipo());
+    JTextField campoMaterial = new JTextField(bicicleta.getMaterial());
+
+    panelEdicion.add(new JLabel("Marca:"));
+    panelEdicion.add(campoMarca);
+    panelEdicion.add(new JLabel("Tipo:"));
+    panelEdicion.add(campoTipo);
+    panelEdicion.add(new JLabel("Material:"));
+    panelEdicion.add(campoMaterial);
+
+    int resultado = JOptionPane.showConfirmDialog(this, panelEdicion, "Editar Bicicleta", JOptionPane.OK_CANCEL_OPTION, JOptionPane.PLAIN_MESSAGE);
+
+    if (resultado == JOptionPane.OK_OPTION) {
+        String nuevaMarca = campoMarca.getText().trim();
+        String nuevoTipo = campoTipo.getText().trim();
+        String nuevoMaterial = campoMaterial.getText().trim();
+
+        if (nuevaMarca.isEmpty() || nuevoTipo.isEmpty() || nuevoMaterial.isEmpty()) {
+            JOptionPane.showMessageDialog(this, "Todos los campos son obligatorios.", "Error", JOptionPane.ERROR_MESSAGE);
+            return;
+        }
+
+        bicicleta.setMarca(nuevaMarca);
+        bicicleta.setTipo(nuevoTipo);
+        bicicleta.setMaterial(nuevoMaterial);
+        JOptionPane.showMessageDialog(this, "Los datos de la bicicleta se han actualizado correctamente.", "Éxito", JOptionPane.INFORMATION_MESSAGE);
+    }
     }//GEN-LAST:event_BotonEditarActionPerformed
 private void limpiarCampos() {
     campoMarca.setText("");
